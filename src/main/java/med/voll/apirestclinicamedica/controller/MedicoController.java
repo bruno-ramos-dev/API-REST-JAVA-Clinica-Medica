@@ -1,9 +1,7 @@
 package med.voll.apirestclinicamedica.controller;
 
-import med.voll.apirestclinicamedica.medico.DadosCadastroMedico;
-import med.voll.apirestclinicamedica.medico.DadosListagemMedico;
-import med.voll.apirestclinicamedica.medico.Medico;
-import med.voll.apirestclinicamedica.medico.MedicoRepository;
+import jakarta.validation.Valid;
+import med.voll.apirestclinicamedica.medico.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -20,12 +18,19 @@ public class MedicoController {
 
     @PostMapping
     @Transactional
-    public void cadastrar(@RequestBody DadosCadastroMedico dados) {
+    public void cadastrar(@RequestBody @Valid DadosCadastroMedico dados) {
         repository.save(new Medico(dados));
     }
 
     @GetMapping
     public Page<DadosListagemMedico> listar(@PageableDefault(size = 10, sort = {"nome"}) Pageable paginacao) {
-        return repository.findAll(paginacao).map(DadosListagemMedico::new);
+        return repository.findAllByAtivoTrue(paginacao).map(DadosListagemMedico::new);
+    }
+
+    @PutMapping
+    @Transactional
+    public void atualizar(@RequestBody @Valid DadosAtualizacaoMedico dados) {
+        var medico = repository.getReferenceById(dados.id());
+        medico.atualizarInformacoes(dados);
     }
 }
