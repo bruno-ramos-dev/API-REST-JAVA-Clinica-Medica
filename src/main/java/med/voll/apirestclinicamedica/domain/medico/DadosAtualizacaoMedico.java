@@ -1,8 +1,8 @@
-package med.voll.apirestclinicamedica.medico;
+package med.voll.apirestclinicamedica.domain.medico;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import med.voll.apirestclinicamedica.endereco.DadosEndereco;
+import med.voll.apirestclinicamedica.domain.endereco.DadosEndereco;
 
 public record DadosAtualizacaoMedico(
         @NotNull
