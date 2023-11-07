@@ -1,4 +1,4 @@
-package med.voll.apirestclinicamedica.paciente;
+package med.voll.apirestclinicamedica.domain.paciente;
 
 public record DadosListagemPaciente(
         Long id,

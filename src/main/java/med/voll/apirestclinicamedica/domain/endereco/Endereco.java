@@ -1,4 +1,4 @@
-package med.voll.apirestclinicamedica.endereco;
+package med.voll.apirestclinicamedica.domain.endereco;
 
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;

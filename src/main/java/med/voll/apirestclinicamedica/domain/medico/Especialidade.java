@@ -1,4 +1,4 @@
-package med.voll.apirestclinicamedica.medico;
+package med.voll.apirestclinicamedica.domain.medico;
 
 public enum Especialidade {
 

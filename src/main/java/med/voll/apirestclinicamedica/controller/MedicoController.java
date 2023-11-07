@@ -1,7 +1,7 @@
 package med.voll.apirestclinicamedica.controller;
 
 import jakarta.validation.Valid;
-import med.voll.apirestclinicamedica.medico.*;
+import med.voll.apirestclinicamedica.domain.medico.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
