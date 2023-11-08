@@ -1,15 +1,11 @@
-package med.voll.apirestclinicamedica.infra;
+package med.voll.apirestclinicamedica.infra.exception;
 
 import jakarta.persistence.EntityNotFoundException;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
-import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-
-import java.sql.SQLIntegrityConstraintViolationException;
 
 @RestControllerAdvice
 public class TratadorDeErros {
