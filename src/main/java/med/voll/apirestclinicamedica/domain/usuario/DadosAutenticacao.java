@@ -1,0 +1,7 @@
+package med.voll.apirestclinicamedica.domain.usuario;
+
+public record DadosAutenticacao(
+        String login,
+        String senha
+) {
+}
