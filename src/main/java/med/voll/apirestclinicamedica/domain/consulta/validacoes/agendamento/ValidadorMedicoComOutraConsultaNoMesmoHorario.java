@@ -1,4 +1,4 @@
-package med.voll.apirestclinicamedica.domain.consulta.validacoes;
+package med.voll.apirestclinicamedica.domain.consulta.validacoes.agendamento;
 
 import med.voll.apirestclinicamedica.domain.ValidacaoException;
 import med.voll.apirestclinicamedica.domain.consulta.ConsultaRepository;
