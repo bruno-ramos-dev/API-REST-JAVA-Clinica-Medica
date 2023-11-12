@@ -13,7 +13,7 @@ public class ValidadorMedicoAtivo implements ValidadorAgendamentoDeConsulta {
     private MedicoRepository repository;
 
     public void validar(DadosAgendamentoConsulta dados) {
-        if (dados.idMedico() != null) {
+        if (dados.idMedico() == null) {
             return;
         }
 

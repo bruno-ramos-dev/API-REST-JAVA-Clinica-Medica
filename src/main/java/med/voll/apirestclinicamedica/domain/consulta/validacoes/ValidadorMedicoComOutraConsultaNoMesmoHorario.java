@@ -15,7 +15,7 @@ public class ValidadorMedicoComOutraConsultaNoMesmoHorario implements ValidadorA
     public void validar(DadosAgendamentoConsulta dados) {
         var medicoPossuiOutraConsultaNoMesmoHorario =
                 repository
-                        .existsByMedicoIdAndDataAndMotivoCancelamentoIsNull(
+                        .existsByMedicoIdAndData(
                                 dados.idMedico(),
                                 dados.data()
                         );
